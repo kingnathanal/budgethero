@@ -2,7 +2,7 @@
   <div class="container-fluid">
       <div class="card" v-for="bill in bills" :key="bill.id">
           <div class="card-body">
-              {{bill.name}} {{bill.amount}}
+              {{bill.name}} ${{bill.amount}}
           </div>
       </div>
   </div>
