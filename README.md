@@ -1,5 +1,14 @@
 # budgethero_ui
 
+The purpose of this app was to create a easy to use monthly budget view of income and expense, using VueJs
+
+![](screensnip.jpg)
+
+Coming soon... 
+- CURD operations
+- Backend App with Database
+- User Authentication
+
 ## Project setup
 ```
 npm install
