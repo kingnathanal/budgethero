@@ -15,6 +15,7 @@ public class User {
     private String username;
     @JsonIgnore
     private String password;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_detail_id")
     private UserDetail userDetail;
