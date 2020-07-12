@@ -41,9 +41,9 @@
         <div class="col">
           <div class="card">
             <div class="card-header">Monthly Income</div>
-            <div class="card-body p-1">
-              <table class="table-sm table-striped table-bordered w-100 text-left">
-                <thead class="thead-light">
+            <div class="card-body p-2">
+              <table class="table table-bordered w-100 text-left">
+                <thead class="thead-dark">
                   <tr>
                     <th class="w-50">Item</th>
                     <th class="w-25">Amount</th>
@@ -90,11 +90,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card shadow-sm">
             <div class="card-header">Monthly Expenses</div>
-            <div class="card-body p-1">
-              <table class="table-sm table-striped table-bordered w-100 text-left">
-                <thead class="thead-light">
+            <div class="card-body p-2">
+              <table class="table table-bordered w-100 text-left">
+                <thead class="thead-dark">
                   <tr>
                     <th class="w-50">Item</th>
                     <th class="w-25">Due Date</th>
@@ -113,11 +113,11 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
+          <div class="card shadow-sm">
             <div class="card-header">Monthly Savings</div>
-            <div class="card-body p-1">
-              <table class="table-sm table-striped table-bordered w-100 text-left">
-                <thead class="thead-light">
+            <div class="card-body p-2">
+              <table class="table table-bordered w-100 text-left">
+                <thead class="thead-dark">
                   <tr>
                     <th class="w-50">Item</th>
                     <th class="w-25">Amount</th>
