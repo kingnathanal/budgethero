@@ -7,17 +7,14 @@ import javax.persistence.*;
 
 @Data
 @Entity
-public class User {
+@Table(name = "user_detail")
+public class UserDetail {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-    private String username;
     @JsonIgnore
     private String password;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_detail_id")
-    private UserDetail userDetail;
-
+    @OneToOne(mappedBy = "userDetail")
+    private User user;
 }
