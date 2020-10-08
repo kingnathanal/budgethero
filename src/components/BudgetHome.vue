@@ -18,7 +18,7 @@
             <div class="card-body text-left p-1
             ">
               <div class="m-2 p-3 border shadow-sm">
-                <h5 class="text-primary">Total Monthly Income</h5>
+                <h5 class="text-primary">Total Monthly incomes</h5>
                 <span class="h2">${{totalIncome}}</span>
               </div>
               <div class="m-2 p-3 border shadow-sm">
@@ -99,6 +99,7 @@
                     <th class="w-50">Item</th>
                     <th class="w-25">Due Date</th>
                     <th class="w-25">Amount</th>
+                   <th class="w-25"></th> 
                   </tr>
                 </thead>
                 <tbody>
@@ -106,6 +107,7 @@
                     <td>{{bill.name}}</td>
                     <td>{{bill.dueDate}}</td>
                     <td>${{bill.amount}}</td>
+                     <td><button class="btn btn-sm btn-danger" :data-id="bill.id" @click="deleteExpensesRow(bill.id)" >x</button></td>
                   </tr>
                 </tbody>
               </table>
@@ -150,9 +152,12 @@ export default {
     return {
       incomes: [
         { id: 1, name: "Check 1", amount: 1500 },
-        { id: 2, name: "Check 2", amount: 500 }
+        { id: 2, name: "Check 2", amount: 500 },
+        { id: 3, name: "Check 3", amount: 1000 },
+        { id: 4, name: "Check 4", amount: 50000 }
       ],
-      bills: [{id:6, name: "Credit Card", amount: 100,dueDate:'01/01' }],
+  
+      bills: [{id:7, name: "Credit Card", amount: 100,dueDate:'01/01' }],
       savings: [
         {id:1,name:'Shoe Box',amount:200},
         {id:2,name:'Bible',amount:50}
@@ -234,6 +239,14 @@ export default {
       this.incomes.forEach((x,i) => {
         if(x.id === id) {
           this.incomes.splice(i,1)
+          this.updateChartData()
+        }
+      })
+    },
+    deleteExpensesRow: function(id) {
+      this.bills.forEach((x,i) => {
+        if(x.id === id) {
+          this.bills.splice(i,1)
           this.updateChartData()
         }
       })
